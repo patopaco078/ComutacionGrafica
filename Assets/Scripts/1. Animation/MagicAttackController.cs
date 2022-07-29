@@ -7,6 +7,7 @@ using UnityEngine;
 public class MagicAttackController : MonoBehaviour {
 
     private Animator animator;
+    [SerializeField] ParticleSystem particle;
 
     private void Awake()
     {
@@ -15,9 +16,14 @@ public class MagicAttackController : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!particle.isEmitting)
         {
-            animator.SetTrigger("IsAttack");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.SetTrigger("IsAttack");
+                particle.Play();
+            }
         }
+        
     }
 }
