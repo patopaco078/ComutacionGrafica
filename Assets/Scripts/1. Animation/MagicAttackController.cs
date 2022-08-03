@@ -15,13 +15,13 @@ public class MagicAttackController : MonoBehaviour {
     }
 
     private void Update()
-    {
-        if (!particle.isEmitting)
+    {   
+        if (true)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 animator.SetTrigger("IsAttack");
-                particle.Play();
+                //particle.Play();
             }
         }
         
