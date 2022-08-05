@@ -21,7 +21,7 @@ public class MagicAttackController : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 animator.SetTrigger("IsAttack");
-                //particle.Play();
+                particle.Play();
             }
         }
         
